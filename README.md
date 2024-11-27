@@ -1,24 +1,21 @@
 # What can go wrong ...
 
-This is inspired by the [what-happens-when](https://github.com/alex/what-happens-when) that details what happens when you type google.com and press enter.
+This is inspired by the [what-happens-when](https://github.com/alex/what-happens-when) that details what happens when you type google.com and press enter. In this version, we attempt to answer "**What can go wrong security-wise when you you are on a login page, you enter your username and password, and press enter.**" Where possible, the headings match the original `what-happens-when`
 
-In this version, we attempt to approach this from a threat modeling/security perspective in as much detail as possible.
-[OWASP Threat Modeling Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html)
+This is a collaborative process so don't be afraid to help out! There are tons of details missing, just waiting for you to add them! So please send a pull request if you'd like.
 
-# Table of Contents
-## Click the address bar on the browser
-https://github.com/BastilleResearch/mousejack
-https://www.blackhillsinfosec.com/executing-keyboard-injection-attacks/
+## The first key is pressed
 
-## Type http://www.google.com through your keyboard and press Enter
-###What Happens When
-When you press enter, an electrical circuit specific to the enter key is closed. The state of each key switch is scanned and converted into a keycode. The keycode is encoded and transported to the 
-computer either through a Universal Serial Bus (USB) or a Bluetooth connection.  
 
-###What can go wrong  
-Keyloggers are software programs or hardware devices that record keystrokes. Anyone with access to the computer can install a keylogger. They could also come as a part of an application installation from an untrusted source. Of course, recording and transmitting keystrokes is innocuous when typing http://www.google.com. But it becomes problematic when typing in login details or financial details.
-More information about keyloggers: https://www.veracode.com/security/keylogger
+### USB based keyboard
+https://www.opswat.com/blog/the-danger-of-a-usb-device-and-keystroke-injection-attack
 
-A physical keyboard is easily subject to spoofing over USB or Bluetooth.
+### Bluetooth keyboard
 
-Side-channel keyboard attacks
+### Mobile/in-built keyboard
+
+### Others
+- Acoustic based keyboard attacks: https://www.youtube.com/watch?v=RLF-Az5SoNU
+- Side-channel attacks: https://arxiv.org/html/2403.08740v1
+
+This is all licensed under the terms of the [Creative Commons Zero](https://creativecommons.org/publicdomain/zero/1.0/) license.
